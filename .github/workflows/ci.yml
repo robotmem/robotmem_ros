@@ -40,8 +40,10 @@ jobs:
 
       # python3-robotmem-pip rosdep key 尚在 review（ros/rosdistro PR #50206）
       # CI 中直接 pip install 替代
+      # Ubuntu 24.04+ (Noble): pip 需要 --break-system-packages
+      # Ubuntu 22.04 (Jammy): 直接 pip install
       - name: "Install robotmem"
-        run: pip3 install --quiet "git+https://github.com/robotmem/robotmem.git"
+        run: pip3 install --break-system-packages --quiet "git+https://github.com/robotmem/robotmem.git" 2>/dev/null || pip3 install --quiet "git+https://github.com/robotmem/robotmem.git"
 
       - uses: ros-tooling/action-ros-ci@v0.4
         id: action_ros_ci
