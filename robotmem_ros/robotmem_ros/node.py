@@ -1,7 +1,10 @@
-"""robotmem ROS 2 Node — SDK 薄包装
+# Copyright 2026 gladego
+#
+# Licensed under the MIT License.
 
-7 Service + 1 Topic（perception 高频流）+ Ready 信号
-三层防御核心在 SDK，ROS 层只做 @ros_error_boundary 薄壳。
+"""robotmem ROS 2 Node — SDK 薄包装.
+
+7 Service + 1 Topic (perception stream) + Ready signal.
 """
 
 from __future__ import annotations

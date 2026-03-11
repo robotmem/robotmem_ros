@@ -1,10 +1,8 @@
-"""robotmem ROS 2 Launch 文件
+# Copyright 2026 gladego
+#
+# Licensed under the MIT License.
 
-用法:
-    ros2 launch robotmem_ros robotmem.launch.py
-    ros2 launch robotmem_ros robotmem.launch.py collection:=robot1
-    ros2 launch robotmem_ros robotmem.launch.py ns:=/robot1 collection:=robot1
-"""
+"""robotmem ROS 2 Launch file."""
 
 import os
 
@@ -16,7 +14,7 @@ from launch_ros.actions import Node
 
 
 def _launch_node(context, *args, **kwargs):
-    """OpaqueFunction: collection 非空时才覆盖 params.yaml 默认值"""
+    """Override params.yaml collection if non-empty."""
     params_file = LaunchConfiguration('params_file').perform(context)
     ns = LaunchConfiguration('ns').perform(context)
     collection = LaunchConfiguration('collection').perform(context)
@@ -36,6 +34,7 @@ def _launch_node(context, *args, **kwargs):
 
 
 def generate_launch_description():
+    """Generate launch description for robotmem node."""
     pkg_dir = get_package_share_directory('robotmem_ros')
     params_file = os.path.join(pkg_dir, 'config', 'params.yaml')
 

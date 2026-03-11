@@ -1,3 +1,7 @@
+# Copyright 2026 gladego
+#
+# Licensed under the MIT License.
+
 from setuptools import find_packages, setup
 
 package_name = 'robotmem_ros'
