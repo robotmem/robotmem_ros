@@ -4,10 +4,13 @@
 
 """Basic import test for robotmem_ros."""
 
-import pytest
+import unittest
 
 
-def test_import_robotmem_ros():
+class TestImport(unittest.TestCase):
     """Verify robotmem_ros package is importable."""
-    import robotmem_ros  # noqa: F401
-    assert robotmem_ros is not None
+
+    def test_import_robotmem_ros(self):
+        """Import robotmem_ros successfully."""
+        import robotmem_ros  # noqa: F401
+        self.assertIsNotNone(robotmem_ros)

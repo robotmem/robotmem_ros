@@ -2,13 +2,17 @@
 #
 # Licensed under the MIT License.
 
+"""Copyright notice check."""
+
+import unittest
+
 from ament_copyright.main import main
-import pytest
 
 
-@pytest.mark.copyright
-@pytest.mark.linter
-def test_copyright():
+class TestCopyright(unittest.TestCase):
     """Check all files have copyright notice."""
-    rc = main(argv=['.', 'test'])
-    assert rc == 0, 'Found errors'
+
+    def test_copyright(self):
+        """Run ament_copyright check."""
+        rc = main(argv=['.', 'test'])
+        self.assertEqual(rc, 0, 'Found copyright errors')
