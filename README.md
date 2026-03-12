@@ -30,8 +30,15 @@ source install/setup.bash
 ### From apt (coming soon)
 
 ```bash
+# 1. Install robotmem Python library (pip dependency, not in apt)
+pip install robotmem
+
+# 2. Install ROS 2 packages
 sudo apt install ros-humble-robotmem-ros ros-humble-robotmem-msgs
 ```
+
+> **Note:** `robotmem` is a pip-only dependency. The ROS apt packages do not
+> automatically pull it in. You must install it separately with `pip install robotmem`.
 
 ## Quick Start
 
