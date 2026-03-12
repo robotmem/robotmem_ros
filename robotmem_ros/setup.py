@@ -1,6 +1,6 @@
 # Copyright 2026 gladego
 #
-# Licensed under the MIT License.
+# Licensed under the Apache License, Version 2.0.
 
 from setuptools import find_packages, setup
 
@@ -21,7 +21,7 @@ setup(
     maintainer='gladego',
     maintainer_email='gadesawnordeatine@gmail.com',
     description='ROS 2 node for robotmem',
-    license='MIT',
+    license='Apache-2.0',
     entry_points={
         'console_scripts': [
             'robotmem_node = robotmem_ros.node:main',

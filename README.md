@@ -107,4 +107,4 @@ robotmem_ros Node
 
 ## License
 
-MIT
+Apache-2.0

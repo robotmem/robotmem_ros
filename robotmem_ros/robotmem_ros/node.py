@@ -1,6 +1,6 @@
 # Copyright 2026 gladego
 #
-# Licensed under the MIT License.
+# Licensed under the Apache License, Version 2.0.
 
 """robotmem ROS 2 Node — SDK 薄包装.
 
